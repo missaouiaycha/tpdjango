@@ -1,0 +1,14 @@
+{% extends 'magasin/base.html' %}
+{% block content %} 
+{% load static %}
+
+<link rel='stylesheet' type='text/css' media='screen'href="{% static 'css/ajoutFournisseur.css'%}">
+ <div class="col-md-12 text-center">
+ <h2>Ajout Fournesseur ...... </h2>
+ </div> 
+ <form method='POST' class="post-form">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <button type="sumit" class="btn btn-default">Enregistrer</button>
+ </form> 
+{% endblock %}
